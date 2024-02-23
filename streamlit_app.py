@@ -23,8 +23,8 @@ if st.button('Predict'):
     # Find the match details for the selected game
     match_details = filtered_games.loc[filtered_games['Game_ID'] == game_id, ['Home Win %', 'Away Win %', 'Draw %']].values[0]
     
-    # Display the results
-    st.write(f'Teams: {game_id}')
-    st.write(f'Home Win %: {match_details[0]}')
-    st.write(f'Away Win %: {match_details[1]}')
-    st.write(f'Draw %: {match_details[2]}')
+    # Display the results using st.metric
+    st.metric(label="Teams", value=game_id)
+    st.metric(label="Home Win %", value=match_details[0])
+    st.metric(label="Away Win %", value=match_details[1])
+    st.metric(label="Draw %", value=match_details[2])
