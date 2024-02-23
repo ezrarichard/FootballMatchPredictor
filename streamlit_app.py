@@ -39,7 +39,7 @@ if st.button('Predict'):
         </div>
         <div style="display: flex; justify-content: space-around; align-items: center; padding: 20px;">
             <div style="flex-grow: 1;">
-                <h4>HOME</h4>
+                <h4>{home_team}</h4>
                 <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
                     <p style="padding-top: 40px;">{home_win_percent}</p>
                 </div>
@@ -51,7 +51,7 @@ if st.button('Predict'):
                 </div>
             </div>
             <div style="flex-grow: 1;">
-                <h4>AWAY</h4>
+                <h4>{away_team}</h4>
                 <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
                     <p style="padding-top: 40px;">{away_win_percent}</p>
                 </div>
