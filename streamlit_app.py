@@ -32,7 +32,7 @@ if st.button('Predict'):
     
     # Custom HTML and CSS to style the output
     html_content = f"""
-    <div style="background-color: #1E90FF; padding: 10px; border-radius: 10px; text-align: center; color: white; font-family: sans-serif;">
+    <div style="background-color: #1b3752; padding: 10px; border-radius: 10px; text-align: center; color: #1b3752; font-family: sans-serif;">
         <h2 style="color: white; text-shadow: 2px 2px 4px #000000;">MATCH PREDICTION</h2>
         <div style="margin: 20px; padding: 20px; background: #FFFFFF; border-radius: 10px; box-shadow: 2px 2px 4px #000000;">
             <h3 style="margin-bottom: 0;">{home_team} vs {away_team}</h3>
@@ -46,7 +46,7 @@ if st.button('Predict'):
             </div>
             <div style="flex-grow: 1;">
                 <h4>DRAW</h4>
-                <div style="height: 50px; width: 50px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
+                <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
                     <p style="padding-top: 15px;">{draw_percent}</p>
                 </div>
             </div>
