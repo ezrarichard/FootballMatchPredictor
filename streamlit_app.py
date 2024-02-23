@@ -35,7 +35,7 @@ if st.button('Predict'):
     <div style="background-color: #1b3752; padding: 10px; border-radius: 10px; text-align: center; color: #1b3752; font-family: sans-serif;">
         <h2 style="color: white; text-shadow: 2px 2px 4px #000000;">MATCH PREDICTION</h2>
         <div style="margin: 20px; padding: 20px; background: #FFFFFF; border-radius: 10px; box-shadow: 2px 2px 4px #000000;">
-            <h3 style="margin-bottom: 0;">{home_team} vs {away_team}</h3>
+            <h3 style="margin-bottom: 0; color: #1b3752;">{home_team} vs {away_team}</h3>
         </div>
         <div style="display: flex; justify-content: space-around; align-items: center; padding: 20px;">
             <div style="flex-grow: 1;">
@@ -47,7 +47,7 @@ if st.button('Predict'):
             <div style="flex-grow: 1;">
                 <h4>DRAW</h4>
                 <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
-                    <p style="padding-top: 15px;">{draw_percent}</p>
+                    <p style="padding-top: 40px;">{draw_percent}</p>
                 </div>
             </div>
             <div style="flex-grow: 1;">
