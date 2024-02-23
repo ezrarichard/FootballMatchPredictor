@@ -23,8 +23,42 @@ match_details = filtered_games_by_country.loc[filtered_games_by_country['Game_ID
 
 # Button to make the prediction
 if st.button('Predict'):
-    # Display the results with the names of the clubs
-    st.write(f"Match: {match_details['Home']} vs {match_details['Away']}")
-    st.metric(label=f"{match_details['Home']} Win %", value=match_details['Home Win %'])
-    st.metric(label=f"{match_details['Away']} Win %", value=match_details['Away Win %'])
-    st.metric(label="Draw %", value=match_details['Draw %'])
+    # Define the match details
+    home_team = match_details['Home']
+    away_team = match_details['Away']
+    home_win_percent = match_details['Home Win %']
+    away_win_percent = match_details['Away Win %']
+    draw_percent = match_details['Draw %']
+    
+    # Custom HTML and CSS to style the output
+    html_content = f"""
+    <div style="background-color: #1E90FF; padding: 10px; border-radius: 10px; text-align: center; color: white; font-family: sans-serif;">
+        <h2 style="color: white; text-shadow: 2px 2px 4px #000000;">MATCH PREDICTION</h2>
+        <div style="margin: 20px; padding: 20px; background: #FFFFFF; border-radius: 10px; box-shadow: 2px 2px 4px #000000;">
+            <h3 style="margin-bottom: 0;">{home_team} vs {away_team}</h3>
+        </div>
+        <div style="display: flex; justify-content: space-around; align-items: center; padding: 20px;">
+            <div style="flex-grow: 1;">
+                <h4>HOME</h4>
+                <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
+                    <p style="padding-top: 40px;">{home_win_percent}</p>
+                </div>
+            </div>
+            <div style="flex-grow: 1;">
+                <h4>DRAW</h4>
+                <div style="height: 50px; width: 50px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
+                    <p style="padding-top: 15px;">{draw_percent}</p>
+                </div>
+            </div>
+            <div style="flex-grow: 1;">
+                <h4>AWAY</h4>
+                <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
+                    <p style="padding-top: 40px;">{away_win_percent}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    """
+    
+    # Use st.markdown to display the HTML content
+    st.markdown(html_content, unsafe_allow_html=True)
