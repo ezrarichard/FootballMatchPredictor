@@ -6,25 +6,25 @@ url = 'http://api.clubelo.com/Fixtures'
 data = fetch_data(url)
 processed_data = process_data(data)
 
-# Streamlit app setup
+# Streamlit app
 st.title('Football Match Predictor')
 
-# Dropdown to select the Country
+# Step 1: Dropdown to select the Country
 selected_country = st.selectbox('Select the Country:', processed_data['Country'].unique())
 
-# Filter games based on the selected country
-filtered_games = processed_data[processed_data['Country'] == selected_country]
+# Step 2: Filter games based on the selected country for Game ID selection
+filtered_games_by_country = processed_data[processed_data['Country'] == selected_country]
 
 # Dropdown to select the Game ID based on the selected country
-game_id = st.selectbox('Select the Game ID:', filtered_games['Game_ID'].unique())
+game_id = st.selectbox('Select the Game ID:', filtered_games_by_country['Game_ID'].unique())
+
+# Find the match details for selected Game ID
+match_details = filtered_games_by_country.loc[filtered_games_by_country['Game_ID'] == game_id, ['Home', 'Away', 'Home Win %', 'Away Win %', 'Draw %']].iloc[0]
 
 # Button to make the prediction
 if st.button('Predict'):
-    # Find the match details for the selected game
-    match_details = filtered_games.loc[filtered_games['Game_ID'] == game_id, ['Home Win %', 'Away Win %', 'Draw %']].values[0]
-    
-    # Display the results using st.metric
-    st.metric(label="Teams", value=game_id)
-    st.metric(label="Home Win %", value=match_details[0])
-    st.metric(label="Away Win %", value=match_details[1])
-    st.metric(label="Draw %", value=match_details[2])
+    # Display the results with the names of the clubs
+    st.write(f"Match: {match_details['Home']} vs {match_details['Away']}")
+    st.metric(label=f"{match_details['Home']} Win %", value=match_details['Home Win %'])
+    st.metric(label=f"{match_details['Away']} Win %", value=match_details['Away Win %'])
+    st.metric(label="Draw %", value=match_details['Draw %'])
