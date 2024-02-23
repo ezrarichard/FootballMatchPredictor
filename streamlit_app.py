@@ -45,7 +45,7 @@ if st.button('Predict'):
                 </div>
             </div>
             <div style="flex-grow: 1;">
-                <h4>DRAW</h4>
+                <h5>DRAW</h5>
                 <div style="height: 100px; width: 100px; background: #FFFFFF; border-radius: 50%; box-shadow: 2px 2px 4px #000000; margin: auto;">
                     <p style="padding-top: 40px;">{draw_percent}</p>
                 </div>
