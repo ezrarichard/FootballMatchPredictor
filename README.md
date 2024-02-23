@@ -1,3 +1,6 @@
+
+![EzraRichard_Banner (3)](https://github.com/ezrarichard/FootballMatchPredictor/assets/125721936/53e09f74-00bc-459d-aed1-8e1d24bc068a)
+
 # Football Match Predictor
 
 Welcome to the Football Match Predictor, a tool designed to predict football match outcomes using data from the Club Elo API. This project leverages Python for data processing and Streamlit for an interactive user interface, allowing users to select matches and view predictions based on historical data.
@@ -12,14 +15,14 @@ Welcome to the Football Match Predictor, a tool designed to predict football mat
 
 Follow these instructions to set up the project locally and explore football match predictions.
 
-### Prerequisites
-
-Ensure you have Python 3.6 or later installed on your system. You will also need pip for installing Python packages.
-
 ### Usage
 Select Country and then the match details from the dropdown menu in the Streamlit app.
 Click on the "Predict" button to view the predictions for the selected match.
 The app will display the Teams, Home Win %, Away Win %, and Draw %.
+
+### App
+
+https://footballmatchpredictor.streamlit.app/
 
 ### Acknowledgements
 Club Elo API for providing the football match data.
