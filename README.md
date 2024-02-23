@@ -15,3 +15,13 @@ Follow these instructions to set up the project locally and explore football mat
 ### Prerequisites
 
 Ensure you have Python 3.6 or later installed on your system. You will also need pip for installing Python packages.
+
+### Usage
+Select Country and then the match details from the dropdown menu in the Streamlit app.
+Click on the "Predict" button to view the predictions for the selected match.
+The app will display the Teams, Home Win %, Away Win %, and Draw %.
+
+### Acknowledgements
+Club Elo API for providing the football match data.
+Streamlit for the interactive web app framework.
+Thank you for checking out the Football Match Predictor. Enjoy exploring the predictions!
