@@ -63,5 +63,5 @@ if st.button('Predict'):
     # Use st.markdown to display the HTML content
     st.markdown(html_content, unsafe_allow_html=True)
 
-st.markdown('<p style="position: fixed; bottom: 10px; right: 10px; color: gray; font-size: smaller;">Created by Ezra Richard</p>', unsafe_allow_html=True)
+st.markdown('<p style="position: fixed; bottom: 10px; left: 10px; color: gray; font-size: smaller;">Created by Ezra Richard</p>', unsafe_allow_html=True)
 
