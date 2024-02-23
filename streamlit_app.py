@@ -57,7 +57,7 @@ if st.button('Predict'):
                 </div>
             </div>
         </div>
-        <p style="margin-bottom: 0; right: 10px; color: #d1dae3; font-size: smaller;">Created by Ezra Richard</p>
+        <p style="margin-bottom: 0; right: 5px; color: #d1dae3; font-size: smaller;">Created by Ezra Richard</p>
     </div>
     """
     
