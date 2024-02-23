@@ -16,7 +16,7 @@ selected_country = st.selectbox('Select the Country:', processed_data['Country']
 filtered_games_by_country = processed_data[processed_data['Country'] == selected_country]
 
 # Dropdown to select the Game ID based on the selected country
-game_id = st.selectbox('Select the Game ID:', filtered_games_by_country['Game_ID'].unique())
+game_id = st.selectbox('Select the Match:', filtered_games_by_country['Game_ID'].unique())
 
 # Find the match details for selected Game ID
 match_details = filtered_games_by_country.loc[filtered_games_by_country['Game_ID'] == game_id, ['Home', 'Away', 'Home Win %', 'Away Win %', 'Draw %']].iloc[0]
